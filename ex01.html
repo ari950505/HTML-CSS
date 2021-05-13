@@ -1,0 +1,64 @@
+``` <html>
+    <head>
+        <!--화면에 보이는 요소들 이외의 모든 것들(메타 정보 등등..)담는 공간-->
+        <!--브라우저의 탭에 보이는 정보-->
+        <title>ex01</title>
+        <!--CSS를 로드하는 태그: link, style, -->
+        <!--외부 CSS 로드-->
+        <link rel="stylesheet" href="./ex01.css">
+        <!--본무에서 직접 스타일 지정-->
+        <style>
+            html {
+                background-color: blueviolet;
+            }
+          
+        </style>
+        <!--JavaScript를 로드하는 태그: script-->
+        <script type="text/javascript" src="./ex01.js"></script>
+        <script type="text/javascript">
+            console.log('hello script')
+        </script>
+    </head>
+    <body>
+        <!--화면을 구성하는 요소들을 담는 공간-->
+        <!--Headline h1~h6, 줄바꿈됨-->
+        <h1>Hello HTML</h1>
+        <h2>Hello HTML</h2>
+        <h3>Hello HTML</h3>
+        <h4>Hello HTML</h4>
+        <h5>Hello HTML</h5>
+        <h6>Hello HTML</h6>
+        <!--Pragraph 문장, 줄바꿈됨-->
+        <p style="background-color: cornsilk;">문장 태그ㅋ니ㅏ얼;ㅣㅏ넝ㄹ;ㅣㅏㅓ;니ㅏ얼</p>
+        <p>문장 태그</p>
+        <p>문장 태그</p>
+        <!--줄바꿈 태그-->
+        aaaa<br /> bbb
+        <!--링크 태그, 줄바꿈안됨-->
+        <br><a href="https://www.kfq.or.kr" target="_self" >한국품질재단</a> 
+        cccccccccccccccccccc
+
+        <!-- 이미지 태그, 줄바꿈안됨 -->
+        <br><img src="./a.jpg" alt="귀여운강아지" >
+        <br><img src="https://euler.synap.co.kr/images/euler_portrait.png" alt="hoot" >
+        <!-- 양식 태그 어디로 보낼거얌 -->
+        <form action="">
+            <label for="">아이디 입력</label>
+            <input type="text"/>
+            <br>
+            <label for="">패스워드</label>
+            <input type="password" name="" id=""/>
+            <br>
+            <input type="submit" value="전송">
+       
+            <!-- div영역을 지정하는 태그, 줄바꿈됨 -->
+            <div>
+                <p>assdf</p>
+                <img src="./a.jpg" alt="ddddd">
+            </div>
+            <!-- span영역을 지정하는 태그, 줄바꿈안됨 -->
+            <span>영역 지정 줄바꿈 안됨</span>ㅇㅇㅇㅇㅇ
+        </form>
+    </body>
+</html>
+```
