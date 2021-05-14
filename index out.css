@@ -1,0 +1,23 @@
+.blind {
+    display: none;
+}
+#header {
+    height: 64px;
+    background-color: skyblue;
+}
+#main {
+    margin: 0 auto;
+    width: 1024px;
+    height:100%;
+    background-color:pink;
+
+}
+
+#footer {
+    height: 64px;
+    background-color: beige;
+}
+
+#word {
+    text-decoration-color: #ffffff;
+}

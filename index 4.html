@@ -1,0 +1,126 @@
+<html>
+    <head>
+        <title>Grab Market</title>
+        <link rel = "stylesheet" href = "css/index up.css">
+        <script type="text/javascript">
+        //jQuery 사용시 지원 하는 형식
+        // $(document).ready(function(){
+        //소스작성    
+        // });
+        window.onload = function() { 
+            
+            var products = [
+                {
+                    name: "농구공 1호",
+                    price: 10000,
+                    seller:"Jordan",
+                    imageUrl:"images/products/basketball1.jpeg"
+                },
+                {
+                    name: "축구공 1호",
+                    price:50000,
+                    seller: "Merci",
+                    imageUrl:"images/products/soccerball1.jpg"
+                },
+                {
+                    name:"키보드 1호",
+                    price: 15000,
+                    seller: "Grab",
+                    imageUrl:"images/products/keyboard1.jpg",
+                }
+            ];
+            let productsHtml = "";
+            for (var i = 0; i < products.length; i++) {
+                let product = products[i];
+                // 배열이나 리스트 개체에 다 들어가져 있음.
+               
+                productsHtml = 
+                        productsHtml +
+                        '<div class="product-card">'+
+                        "<div>"+
+                        '<img class="product-img" src="'+
+                        product.imageUrl +
+                        '" alt="농구공"/>'+
+                        "</div>"+
+                        '<div class="product-contents">'+
+                        '<span class="product-name">'+
+                        product.name + 
+                        "</span>"+
+                        '<span class="product-price">'+
+                        product.price +
+                        "</span>"+       
+                        "</div>"+
+                        '<div class="product-seller">'+
+                        '<img class="product-avatar"  src="images/icons/avatar.png" alt="아바타"/>'+
+                        "<span>" +
+                        product.seller +
+                        "</span>"+
+                        "</div>"+                        
+                        "</div>";
+                         
+                };
+                document.querySelector("#product-list").innerHTML = productsHtml;
+
+        };
+
+
+        </script>
+    </head>
+    <body>
+        <header>
+            <h1 class = "blind">그랩 마켓</h1>
+            <section>
+                <h1 class = "blind">헤더</h1>
+                <div id="header">
+                    
+                    <div id="header-area">
+                        <img src="./images/icons/logo.png" alt="로고">
+                    </div>        
+                    </div>
+            </section>
+        </header>
+        <main>
+            <section>
+                <h1 class="blind">메인</h1>
+                <div id= "main">
+                    <section>
+                        <h1 class="blind">Banner</h1>
+                        <div id = "banner"></div>
+                        <div id = "banner1">
+                            <img src="images/banners/banner1.png" alt="banner">
+                        </div>
+                    </section>
+                    <section>
+                        <h1>판매되는 상품들</h1>
+                        <div id = "product-list">
+
+                            <div class="product-card">
+                                <div>
+                                    <img class="product-img" src="images/products/basketball1.jpeg" alt="농구공">
+                                </div>
+                                <div class="product-contents">
+                                    <span class="prodect-name">농구공 1호</span>
+                                    <span class="product-price">50000</span>       
+                                </div>
+                                <div class="product-seller">
+                                    <img class="product-avatar"
+                                    src="images/icons/avatar.png" alt="아바타">
+                                    <span>mina</span>
+                                </div>                        
+                            </div>                                    
+                        </div>
+                    </section>
+
+                </div>
+            </section>
+        </main>    
+        <footer>
+            <section>
+                <h1 class="blind">footer</h1>
+                <div id = "footer">풋터 로그</div>
+                <div>카피라이터</div>
+            </section>
+        </footer>
+        
+    </body>
+</html>
