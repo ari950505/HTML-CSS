@@ -1,68 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>ES6</title>
-        <script type="text/javascript">
-            // const hello = "안녕";
-            // const introduce = "나는 정현이야.";
-            // const age = 5;
-            // const text = `${hello}! ${introduce} 그리고 ${age}살이야`;
-            // console.log(text);
-            // const grab = {
-            //     name: "그랩",
-            //     age: 27,
-            // };
-            // 기존 (ES5) 방식
-            // const people = ["민수", "철수"];
-            // var name = grab.name;
-            // var age = grab.age;
-            // var minsoo = people[0];
-            // var chulsoo = people[1];
-            // // ES6 현재 방식
-            // const { name, age } = grab;
-            // const [ninsoo, chulsoo] = people;
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES6</title>
+    <script type = "text/javascript">
+        // const hello = "안녕";
+        // const introduce = "나는 정현이야.";
+        // const age = 5;
+        // const text = `${hello}! ${introduce} 그리고 ${age} 살이야`;
+        // console.log(text)
+        // const grab = {
+        //     name: "그랩",
+        //     age: 27
+        // };
 
-            //map, forEach
-            var products = [
-                {
-                    name: "농구공",
-                    price: 50000,
-                },
-                {
-                    name: "축구공",
-                    price: 40000,
-                },
-            ];
-            // ES5
-            // for (var i = 0; i < products.length; i++) {
-            //     var name = products[i].name;
-            //     console.log("제품 이름: " + name);
-            // }
-            // ES6
-            // products.forEach(function (product, index) {
-            //     console.log(index + 1 + "번째 호출");
-            //     console.log(product.name);
-            // });
-            // products.map(function (product, index) {
-            //     console.log(index + 1 + "번째 호출");
-            //     console.log(product.name);
-            // });
-            // var productNames = products.map(function (product, index) {
-            //     return product.name;
-            // });
-            // console.log(productNames);
-            //React 에서 map 사용 예
-            // var productEl = products.map((product, index) => {
-            //     return (
-            //         <div>
-            //             <span>{product.name}</span>
-            //         </div>
-            //     );
-            // });
+        // 기준 (ES5) 방식
+        // // const people = ["민수","철수"];
+        // // var name = grab.name;
+        // // var age  = grab.age;
+        // // var minsoo = people[0];
+        // // var chulsoo = people[1];
+
+        // //ES6 문법 현재 방식
+        // const {name, age} = grab;
+        // const [minsoo, chulsoo] = people;
+
+        // map, forEach
+    //     var products = [
+    //         {
+    //             name: "농구공",
+    //             price: 50000,
+    //         }, 
+    //         {
+    //             name: '축구공',
+    //             price: 40000,
+    //         },
+    // ];
+    // // ES5
+    // for (var i = 0; i < products.length; i++) {
+    //     var name = products[i].name;
+    //     console.log(" 제품 이름: " + name);
+    // };
+
+    // //ES6
+    // products.forEach(function(products,index) {
+    //     console.log(index + 1 ) + '번째 호출');
+    //     console.log(product.name);
+    // });
+
+// map
+    // products.map(function(products,index) {
+    //     console.log(index + 1 ) + '번째 호출');
+    //     console.log(product.name);
+    // });
+//     var productNames = products.map(function(product,index){
+//         return product.name;
+//     });
+// // react 에서 map 사용 예
+
+//         var productE1 = products.map(function (product, index)
+//             return (
+//                 <div>
+//                     <span> [product.name]</span>
+//                 </div>
+//             );
+        // });
+        // lambda Function(람다함수, 람다식)
+        // function(){return}
+        // () =>{})
+        // 함수 선언식
+        // fuction getName(name) {
+        //     return `${name} 입니다`;
+        // };
+        // // 람다식
+        // const getName = (name) => `${name}입니다`;
+        // const getName = function (name) {
+            // return `${name}입니다`;
+        // }''
+        // 3항 연산자
+        const language = 'javascript';
+        if (language === 'javascript') {
+            console.log("재미있다");
+        } else { 
+            console.log(" 더 재밌다");
+        }
+        language === "javascript" ? console.log ("재미있다") : console.log("더 재미있따");
+        const isJavascript = language === "javascript" ? true : false;
+
+        // export, import
+        // <script scr = "http=... "></script> 원격 이렇게 불러올 수 있음
+        // <script scr = "./hello.js"></script>  로컬에서 모듈? 불러올 수 있음
+        <!-- 노드 es5 -->
+        // require(./"hello.js");
+          <!-- 노드 es6  -->
+          <!-- import axios from './axios';
+          import App from './App.js';
+          import potato from './main'; -->
+          function App() {
+              return <h1> hello </h1>
+          }
+          function a() {
+              return <h1> hello </h1>
+          }
+          function b() {
+              return <h1> hello </h1>
+          }
+          function c() {
+              return <h1> hello </h1>
+          }
+
+          export default App;
+
+          import {a,b,c,d} from './App.js';
+
+          <!-- babel -->
+          <script src=""></script>
+          <script type = "text/babel">
+          let a ='aaa';
+          var a = 'aaa';
         </script>
-    </head>
-    <body></body>
+    </script>
+</head>
+<body>
+    
+</body>
 </html>
