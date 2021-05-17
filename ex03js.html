@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ES6</title>
+        <script type="text/javascript">
+            // const hello = "안녕";
+            // const introduce = "나는 정현이야.";
+            // const age = 5;
+            // const text = `${hello}! ${introduce} 그리고 ${age}살이야`;
+            // console.log(text);
+            // const grab = {
+            //     name: "그랩",
+            //     age: 27,
+            // };
+            // 기존 (ES5) 방식
+            // const people = ["민수", "철수"];
+            // var name = grab.name;
+            // var age = grab.age;
+            // var minsoo = people[0];
+            // var chulsoo = people[1];
+            // // ES6 현재 방식
+            // const { name, age } = grab;
+            // const [ninsoo, chulsoo] = people;
+
+            //map, forEach
+            var products = [
+                {
+                    name: "농구공",
+                    price: 50000,
+                },
+                {
+                    name: "축구공",
+                    price: 40000,
+                },
+            ];
+            // ES5
+            // for (var i = 0; i < products.length; i++) {
+            //     var name = products[i].name;
+            //     console.log("제품 이름: " + name);
+            // }
+            // ES6
+            // products.forEach(function (product, index) {
+            //     console.log(index + 1 + "번째 호출");
+            //     console.log(product.name);
+            // });
+            // products.map(function (product, index) {
+            //     console.log(index + 1 + "번째 호출");
+            //     console.log(product.name);
+            // });
+            // var productNames = products.map(function (product, index) {
+            //     return product.name;
+            // });
+            // console.log(productNames);
+            //React 에서 map 사용 예
+            // var productEl = products.map((product, index) => {
+            //     return (
+            //         <div>
+            //             <span>{product.name}</span>
+            //         </div>
+            //     );
+            // });
+        </script>
+    </head>
+    <body></body>
+</html>
